@@ -3,7 +3,7 @@
 Application pour assurer la connexion des utilisateurs sur les
  applications Horizon.
  
-## Utilisation local
+## Utilisation locale
 
 ### L'IDE
 Pour le développement, il est recommandé d'utiliser PyCharm 
@@ -12,7 +12,7 @@ Professional ([Télécharger](https://www.jetbrains.com/pycharm/download/#sectio
 
 ### Python
 
-Vous devez avoir installé Python 3 sur votre machine:
+Vous devez avoir installé Python3 sur votre machine:
 
 * Windows (pas recommandé, mais bon): 
     * Python: https://www.python.org/downloads/release
