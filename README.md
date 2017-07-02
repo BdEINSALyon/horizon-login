@@ -12,6 +12,8 @@ Professional ([Télécharger](https://www.jetbrains.com/pycharm/download/#sectio
 
 ### Python
 
+#### L'ancienne methode
+
 Vous devez avoir installé Python3 sur votre machine:
 
 * Windows (pas recommandé, mais bon): 
@@ -25,6 +27,33 @@ Vous devez avoir installé Python3 sur votre machine:
     * `sudo apt-get install python3 python3-pip python3-virtualenv`
 
 Ensuite importez le projet dans PyCharm depuis le VCS GitHub.
+
+#### PyEnv
+
+PyEnv est une alternative plus pratique pour la gestion des versions de Python sur votre système et je vous le
+recommende très fortement.
+
+Pour l'installation de PyEnv sur Ubuntu avec Bash:
+
+```bash
+sudo apt-get install -y make build-essential libssl-dev zlib1g-dev libbz2-dev \
+libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev \
+xz-utils tk-dev;
+curl -L https://raw.githubusercontent.com/pyenv/pyenv-installer/master/bin/pyenv-installer | bash;
+git clone https://github.com/pyenv/pyenv-virtualenv.git $(pyenv root)/plugins/pyenv-virtualenv;
+cat <<EOT >> ~/.bashrc
+
+# PyEnv
+export PATH="~/.pyenv/bin:$PATH"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+EOT
+```
+
+A voir pour les autres OS:
+- https://github.com/pyenv/pyenv-installer
+- https://github.com/pyenv/pyenv-virtualenv
+- https://github.com/pyenv/pyenv
 
 ### La Base de données
 
