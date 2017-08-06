@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Connexion - BdE INSA Lyon</title>
+    <style>
+        body {
+            background: lightgray;
+        }
+
+        div#form.container {
+            max-width: 400px;
+            margin: 8em auto;
+            border: 1px solid #fff;
+            background: #FFFFFF;
+        }
+
+        div#form.container img.logo {
+            margin: 1em auto;
+            width: 50px;
+            display: block;
+        }
+
+        #login-form label{
+            display: none;
+        }
+
+        #login-form .form-input{
+            margin: 0.5em 5em;
+        }
+
+        #login-form .input {
+            width: 100%;
+            padding: 0.2em;
+        }
+
+        #login-form .button {
+            width: 50%;
+            margin: 0 auto;
+            display: block;
+        }
+
+
+    </style>
+</head>
+<body>
+<div class="container" id="form">
+    <img class="logo" src="http://logos.bde-insa-lyon.fr/bde/bde_70px.png">
+    <form method="post" id="login-form">
+        {% csrf_token %}
+        <div class="form-input">
+            <label for="login">Identifiant&nbsp;:</label>
+            <input type="text" id="login" name="login" class="input" placeholder="Identifiant"/>
+        </div>
+        <div class="form-input">
+            <label for="password">Mot de passe&nbsp;:</label>
+            <input type="password" id="password" name="password" class="input" placeholder="Mot de passe">
+        </div>
+        <div class="form-input">
+            <button class="button" type="submit">
+                Connexion
+            </button>
+            <p></p>
+        </div>
+    </form>
+</div>
+</body>
+</html>
