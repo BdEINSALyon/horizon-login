@@ -19,7 +19,7 @@ from django.contrib.auth.models import User, Group
 from django.contrib import admin
 
 from rest_framework import permissions, routers, serializers, viewsets
-from oauth2_provider.ext.rest_framework import TokenHasReadWriteScope, TokenHasScope
+from oauth2_provider.contrib.rest_framework import TokenHasReadWriteScope, TokenHasScope
 
 
 admin.autodiscover()
