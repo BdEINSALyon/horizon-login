@@ -16,7 +16,7 @@ class LoginView(FormView):
         user = authenticate(self.request, username=form.data['login'], password=form.data['password'])
         if user is not None:
             login(self.request, user)
-            return HttpResponseRedirect(self.request.POST.get('next', '/'))
+            return HttpResponseRedirect(self.request.GET.get('next', '/'))
         else:
             return super().form_invalid(form)
 
