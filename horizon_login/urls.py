@@ -21,6 +21,7 @@ from django.contrib import admin
 from rest_framework import permissions, routers, serializers, viewsets
 from oauth2_provider.contrib.rest_framework import TokenHasReadWriteScope, TokenHasScope
 
+from login.views import LoginView
 
 admin.autodiscover()
 # first we define the serializers
@@ -29,11 +30,13 @@ admin.autodiscover()
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
+        fields = '__all__'
 
 
 class GroupSerializer(serializers.ModelSerializer):
     class Meta:
         model = Group
+        fields = '__all__'
 
 
 # ViewSets define the view behavior.
@@ -62,4 +65,5 @@ urlpatterns = [
     url(r'^', include(router.urls)),
     url(r'^o/', include('oauth2_provider.urls', namespace='oauth2_provider')),
     url(r'^admin/', admin.site.urls),
+    url(r'^accounts/login/$', LoginView.as_view()),
 ]
