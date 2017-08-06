@@ -1,0 +1,35 @@
+body {
+    background: lightgray;
+}
+
+div#form.container {
+    max-width: 400px;
+    margin: 8em auto;
+    border: 1px solid #fff;
+    background: #FFFFFF;
+}
+
+div#form.container img.logo {
+    margin: 1em auto;
+    width: 50px;
+    display: block;
+}
+
+#login-form label {
+    display: none;
+}
+
+#login-form .form-input {
+    margin: 0.5em 5em;
+}
+
+#login-form .input {
+    width: 100%;
+    padding: 0.2em;
+}
+
+#login-form .button {
+    width: 50%;
+    margin: 0 auto;
+    display: block;
+}
